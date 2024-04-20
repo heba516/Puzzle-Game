@@ -5,7 +5,7 @@ var turnsCounter = 0;
 
 /* ///////////////////////////////////////////////// */
 let logo = document.createElement("img");
-logo.src = "images/logo.png";
+logo.src = "Images/logo.png";
 logo.classList.add("logo");
 document.body.appendChild(logo);
 
@@ -20,7 +20,7 @@ imagesindex.sort(() => Math.random() > 0.5 ? 1 : -1);
 imagesindex.forEach(part => {
     let img = document.createElement("img");
     img.classList.add(`${part}`);
-    img.src = `images/${part}.jpg`;
+    img.src = `Images/${part}.jpg`;
     box.appendChild(img);
 });
 
@@ -56,12 +56,12 @@ imagesArray.forEach((image) => {
 
             endSrc = end.className;
     
-            end.src = `images/${currPart.className}.jpg`;
+            end.src = `Images/${currPart.className}.jpg`;
             end.className = '';
             end.classList.add(currPart.className);
             boxClassNames[boxClassNames.indexOf(end.className)] = currPart.className;
     
-            currPart.src = `images/${endSrc}.jpg`;
+            currPart.src = `Images/${endSrc}.jpg`;
             currPart.className = '';
             currPart.classList.add(endSrc);
             boxClassNames[boxClassNames.indexOf(currPart.className)] = endSrc;
@@ -73,7 +73,6 @@ imagesArray.forEach((image) => {
             result("fail");
         }else if (isSorted(boxClassNames)) {
             result("success");
-            console.log("succcccccess");
         }
     });
 });
